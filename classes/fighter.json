@@ -1,0 +1,28 @@
+{
+	"Fighter" : {
+	
+		"attributes" : {
+			 "str" : "6:10"
+			,"dex" : "6:10"
+			,"con": "6:10"
+			,"int" : "6:10"
+			,"wis" : "6:10"
+			,"cha" : "6:10"
+			,"armor" : "10:13"
+			,"initiative" : "-2:2"
+			,"speed" : "20:25"
+		}
+		
+		,"stats" : {
+			 "hp" : "10:36"
+			,"experience" : "0:0"
+			,"level" : "0:0"
+		}
+		
+		,"inventory" : {
+			 "items" : "adventurer s kit"
+			,"gold" : "6:250"
+			,"equip" : ""
+		}
+	}
+}
