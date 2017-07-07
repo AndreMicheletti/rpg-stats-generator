@@ -1,3 +1,3 @@
-# RPG-Stats ( Work In Progress)
+# RPG-Stats /classes ( Work In Progress)
 
-This is a Python script to generate randomized RPG character sheets
+This folder is used to store the classes `.json` files
