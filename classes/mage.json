@@ -1,20 +1,20 @@
 {
-	"Fighter" : {
+	"Mage" : {
 	
 		"attributes" : {
-			 "str" : "11:13"
-			,"dex" : "6:11"
-			,"con": "11:14"
-			,"int" : "6:8"
-			,"wis" : "7:9"
+			 "str" : "6:8"
+			,"dex" : "7:9"
+			,"con": "7:10"
+			,"int" : "11:14"
+			,"wis" : "9:12"
 			,"cha" : "6:10"
-			,"armor" : "10:13"
-			,"initiative" : "-2:2"
-			,"speed" : "20:25"
+			,"armor" : "5:9"
+			,"initiative" : "-2:1"
+			,"speed" : "23:28"
 		}
 		
 		,"stats" : {
-			 "hp" : "8:14"
+			 "hp" : "6:11"
 			,"experience" : "0:0"
 			,"level" : "0:0"
 		}

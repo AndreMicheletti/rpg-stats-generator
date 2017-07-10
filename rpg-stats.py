@@ -1,4 +1,3 @@
-			
 
 def load_classes_names(path = 'classes/'):
 	import os
@@ -19,7 +18,6 @@ def load_class(name, path = 'classes/'):
 	with open(path + name.lower() + '.json', 'r') as file:
 		_class = json.load(file)
 	return _class[name]
-
 
 def name(rpg):
 	import requests
@@ -91,29 +89,51 @@ class RPGSheet(object):
 				
 	def _print(self):
 		from pprint import pprint
-		pprint(self._sheet)
+		print("")
+		print("#" * 40)
+		print("# Name: " + self._sheet['name'])
+		print("# Gender: " + self._sheet['gender']) 
+		print("# Class: " + self._sheet['class'])
+		print("# Alignment: " + self._sheet['alignment'])
+		print("#" * 20)
+		print("# Attributes");
+		pprint(self._sheet['attributes'])
+		print("#" * 20)
+		print("# Stats");
+		pprint(self._sheet['stats'])
+		print("#" * 20)
+		print("# Inventory");
+		pprint(self._sheet['inventory'])
+		print("#" * 40)
 	
 """
 
 __main__
 
 """
+if (__name__ == '__main__'):
 
-my_sheet = {
-	 'name': name
-	,'gender' : gender
-	,'class' : class_
-	,'alignment' : alignment
-	,'attributes' : attributes
-	,'stats' : stats
-	,'inventory' : inventory
-	,'personality' : {
-		'traits' : '',
-		'ideals' : '',
-		'bonds' : '',
-		'flaws' : ''
-	}
-}
+	from threading import Thread
+	import time
+	import sys
 	
-obj = RPGSheet(my_sheet)
-obj._print()
+	def load():
+		my_sheet = {
+			 'name': name
+			,'gender' : gender
+			,'class' : class_
+			,'alignment' : alignment
+			,'attributes' : attributes
+			,'stats' : stats
+			,'inventory' : inventory
+		}
+		obj = RPGSheet(my_sheet)
+		obj._print()
+		
+	th = Thread( target=load )
+	print("loading", end="")
+	th.start()
+	while (th.is_alive()):
+		print(".", end="")
+		sys.stdout.flush()
+		time.sleep(0.4)
